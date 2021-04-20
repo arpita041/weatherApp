@@ -1,0 +1,114 @@
+
+<div>
+<select class="btn btn-light dropdown-toggle minWid" (change)="selectChangeHandler($event)">
+    <option value=" " selected>Locations</option>
+  <option *ngFor="let data of array" value = "{{data}}">
+      {{data}}
+      
+  </option>
+</select>
+</div>
+{{selectedCity}}
+<div class=" myClass m-10" *ngIf="val">
+    <div>
+   <img src="assets/{{weather.weather[0].icon}}@2x.png">
+   <h4 class="pt-4 fl">{{weather.weather[0].description}}</h4>
+   </div>
+    <table  class="table table-striped">
+        <tbody>
+          <tr>
+           <td>City Name</td>
+            <td>{{weather.name}}</td>
+            </tr>
+            <tr>
+            <td>Humidity</td>
+            <td>{{weather.main.humidity}}</td>
+            </tr>
+            <tr>
+            <td>Pressure</td> 
+            <td>{{weather.main.pressure}}</td>
+        </tr>
+        <tr>
+            <td>Temperature</td> 
+            <td>{{weather.main.temp}}</td>
+        </tr>
+        <tr>
+            <td>Visibility</td>
+            <td>{{weather.visibility}}</td>
+        </tr>
+        </tbody>
+        </table>
+        <div>
+            <h4> <span class="display-5 txt">Prediction:</span></h4>
+<div *ngFor="let forecast of foreCast; index as i" class="container">
+    <div class="btn btn-light widd" *ngIf ="i%8==0">
+        Date: {{forecast.dt_txt}}
+        <img class="fr" src="assets/{{forecast.weather[0].icon}}@2x.png">
+      <table class="table-hover">
+       <tr>
+           <td>Temperature:</td>
+           <td>{{forecast.main.temp}}</td>
+           </tr>
+           <tr>
+           <td>Status</td>
+           <td>{{forecast.weather[0].main}}</td>
+           </tr>
+       <tr>
+           <td>Humidity</td>
+           <td>{{forecast.main.humidity}}</td>
+           </tr>
+           <tr>
+           <td>
+            Pressure
+           </td>
+           <td>{{forecast.main.pressure}}
+           </td>
+       </tr>
+      </table>
+    
+    </div>
+</div>
+</div>        
+        </div>
+    <div class=" myClass m-10" *ngIf ="val2">
+        <table *ngIf="val2" class="table table-hover">
+            <tbody>
+              <tr>
+                <td>City Name</td><td>{{weather.name}}</td> </tr>
+               <tr> <td>Humidity</td>  <td>{{weather.main.humidity}}</td></tr>
+               <tr> <td>Pressure</td> <td>{{weather.main.pressure}}</td> </tr>
+             <tr> <td>Temperature</td> <td>{{weather.main.temp}}</td> </tr>
+              <tr><td>Visibility</td>
+            <td>{{weather.visibility}}</td></tr>
+            </tbody>
+            </table>
+            <div *ngFor="let forecast of foreCast; index as i" class="container">
+                <div class="btn btn-light widd" *ngIf ="i%8==0">
+                    Date: {{forecast.dt_txt}}
+                    <img class="fr" src="assets/{{forecast.weather[0].icon}}@2x.png">
+                  <table class="table-hover">
+                   <tr>
+                       <td>Temperature:</td>
+                       <td>{{forecast.main.temp}}</td>
+                       </tr>
+                       <tr>
+                       <td>Status</td>
+                       <td>{{forecast.weather[0].main}}</td>
+                       </tr>
+                   <tr>
+                       <td>Humidity</td>
+                       <td>{{forecast.main.humidity}}</td>
+                       </tr>
+                       <tr>
+                       <td>
+                        Pressure
+                       </td>
+                       <td>{{forecast.main.pressure}}
+                       </td>
+                   </tr>
+                  </table>
+                
+                </div>
+            </div>
+            </div>        
+

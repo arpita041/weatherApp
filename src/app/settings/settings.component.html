@@ -1,0 +1,64 @@
+<div class="container">
+<h4> <span class="display-5 txt">Current Locations:</span></h4>
+<select (change)="setOptionValue($event)" class="btn btn-light dropdown-toggle minWid">
+  <option value=" " selected>  </option>
+  <option *ngFor="let data of array"  class ="row" value = "{{data}}">
+     <div class="col-4 border">
+         {{data}}   
+          </div>
+  </option>
+</select>
+  <!-- <div class= 'container'>
+ <div *ngFor= "let data of array" class="row">
+     <div class="col-4 border">
+         {{data}}   
+          <button *ngIf="btn" class="btn btn-light"  (click)="deteteFromArray()">Delete</button>
+     </div>
+ </div> -->
+ <button class= "btn btn-dark border m-3" (click)="deleteFromArray(arrayVal)"> Delete Location</button>
+ <input class= "form-control" type="text" name="city" #myCity>
+
+<button  class="btn btn-dark border m-2" (click)="addInArray(myCity.value)"> Add New Location </button>
+<hr>
+<h4> <span class="display-5 txt">Set Default Location:</span></h4>
+ <div class= 'container'>
+ <div *ngFor= "let data of array" class="row">
+     <div class="col-4 marg2">
+         {{data}} <button class="btn btn-dark border fr" (click) ="setDefaultLocation(data)">Select</button>
+          </div>    
+ </div>
+ <hr>
+ <h4> <span class="display-5 txt">Your Updated List:</span></h4>
+<hr>
+  <div *ngFor= "let data of array" class="row">
+      <div class=" border hw">
+          {{data}}    
+      </div>
+     
+  </div> 
+  <br>
+  <br>
+  <h4> <span class="display-5 txt">Your Previous Locations:</span></h4>
+  <hr>
+    <div *ngFor= "let data of locArray" class="row">
+        <div class=" border hw">
+            {{data}}    
+        </div>
+       
+    </div> 
+    <br>
+    <br>
+  <div>
+    <h4> <span class="display-5 txt">Select unit of Measurement:</span></h4>
+<br>
+    <div>
+      <input type="radio" id="one" name="temp" value="Metric"
+             checked  (change)="radioChangeHandler($event)">
+      <label class="sz" for="Metric">Metric</label>
+    </div>
+    
+    <div>
+      <input type="radio" id="two" name="temp" value="Imperial" (change)="radioChangeHandler($event)">
+      <label class="sz" for="Imperial">Imperial</label>
+    </div>
+    </div>

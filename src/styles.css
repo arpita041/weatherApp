@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+.cent
+{
+    text-align: center;
+}
+.minWid
+{
+    width: 100%;
+    text-align: center;
+}
+.border
+{
+    border-radius: 10px;
+}
+.btn1
+{
+    float: right;
+}
+.myClass
+{
+    margin: 0px auto;
+    height: 500px;
+    width: 60%;
+}
+.myCol
+{
+    height: 10px;
+}
+.fl
+{
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    color:grey;
+}
+.marg
+{
+    margin-left: 40px;
+}
+.marg2
+{
+    width: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: grey;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.txt
+{
+    font-size: 34px;
+}
+.sz
+{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:grey;
+}
+.widd
+{
+    width: 100%;
+    margin: 10px;
+}
+.fr
+{
+    float: right;
+}
+.hw
+{
+    color: grey;
+    background-color: rgb(235, 235, 235);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    height: 30px;
+}
